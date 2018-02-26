@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jobbbos</title>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <!-- Header section-->
+    <section class="header">
+      <nav>
+        <h1>#Jobbbos</h1>
+        <h2>The greatest job listings from your area!</h2>
+      </nav>
+    </section>
+
+    <section class="main-content">
+        <%= yield %>
+    </section>
+
+    <footer>
+      <p>
+        This is the mighty footer now. All copyrights belong to Jobbbos.inc
+      </p>
+    </footer>
+  </body>
+</html>
