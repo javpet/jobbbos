@@ -2,8 +2,12 @@
 <html>
   <head>
     <title>Jobbbos</title>
+    <!-- Meta tags -->
     <%= csrf_meta_tags %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Other tags -->
+    <%= favicon_link_tag 'jobbbos_icon.png', type: 'image/png' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -12,8 +16,16 @@
     <!-- Header section-->
     <section class="header">
       <nav>
-        <h1>#Jobbbos</h1>
+        <h1><%= link_to "#Jobbbos", root_path, class: "logo" %></h1>
         <h2>The greatest job listings from your area!</h2>
+        <div class="links">
+          <% if !current_page?(controller: 'categories', action: 'new') %>
+            <%= link_to "Create new category", new_category_path, class: "btn-primary" %>
+            <%= link_to "Add new listing", new_category_path, class: "btn-primary" %>
+          <% else %>
+            <%= link_to "←Back to main Jobbbos", root_path  %>
+          <% end %>
+        </div>
       </nav>
     </section>
 
@@ -23,8 +35,9 @@
 
     <footer>
       <p>
-        This is the mighty footer now. All copyrights belong to Jobbbos.inc
+        All rights belong to Jobbbos INC. <span class="italic">like it's a real company</span>
       </p>
+      <a href="https://www.superhi.com/?r=javpet">I learned to code with SuperHi ★★★</a>
     </footer>
   </body>
 </html>

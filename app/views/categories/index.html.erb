@@ -1,0 +1,10 @@
+<h3>Categories</h3>
+<div class="categories">
+  <% @categories.order(title: :asc).each do |category| %>
+    <div class="category">
+      <%= link_to category_path(category) do %>
+        <h2 class="category-label"><%= category.title %></h2>
+      <% end %>
+    </div>
+  <% end %>
+</div>

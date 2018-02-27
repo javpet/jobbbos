@@ -41,8 +41,26 @@ h4 {
 	font-size: 1.25rem;
 }
 
+.italic {
+	font-family: "Roboto Mono", monospace;
+	font-style: italic;
+}
+
 p {
 	line-height: 1.3;
+}
+
+a {
+	text-decoration: underline;
+	text-decoration-color: $middle-black;
+	color: $middle-black;
+	align-self: flex-start;
+
+	&:hover {
+		background-color: $middle-black;
+		color: #fff;
+		font-style: italic;
+	}
 }
 
 nav {
@@ -57,11 +75,33 @@ nav {
 		align-self: flex-start;
 		margin-bottom: 0.25rem;
 	}
+
+	.logo {
+		color: #fff;
+	}
+}
+
+input {
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid $middle-black;
 }
 
 section.header,
 section.main-content {
 	padding: 2rem;
+}
+
+section.main-content {
+	padding-top: 1rem;
+}
+
+.links {
+	margin-top: 1.5rem;
+
+	a:first-child {
+		margin-right: 0.5rem;
+	}
 }
 
 footer {
@@ -73,4 +113,81 @@ footer {
 	color: #fff;
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
+	display: flex;
+	justify-content: space-between;
+	padding-left: 2rem;
+	padding-right: 2rem;
+
+	span {
+		color: $light-grey;
+	}
+
+	a {
+		color: #fff;
+	}
+}
+
+// FORM styling
+section.form form {
+	display: flex;
+	flex-direction: column;
+	max-width: 40%;
+
+	label {
+		margin-top: 2rem;
+	}
+
+	input {
+		margin-top: 0.5rem;
+		background-color: none;
+		font-size: 3rem;
+		font-weight: bold;
+		outline: none;
+
+		&::placeholder {
+			color: $middle-grey;
+			font-weight: 400;
+		}
+	}
+
+	.hint {
+		margin-top: 0.5rem;
+		font-style: italic;
+	}
+
+	.btn-primary {
+		outline: none;
+		cursor: pointer;
+		margin-top: 2rem;
+		align-self: flex-start;
+		text-decoration: underline;
+		border-bottom: none;
+		font-weight: 500;
+		font-size: 1.25rem;
+		text-align: left;
+
+		&:hover {
+			font-style: italic;
+			color: #fff;
+			background-color: $middle-black;
+		}
+	}
+}
+
+// Categories
+.categories {
+	margin-top: 1rem;
+	display: grid;
+	grid-gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	grid-template-rows: 400px;
+}
+
+.category {
+	justify-self: start;
+}
+
+.category h2 {
+	background-color: $middle-black;
+	color: #fff;
 }
