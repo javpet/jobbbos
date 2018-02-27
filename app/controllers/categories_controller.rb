@@ -4,6 +4,11 @@ class CategoriesController < ApplicationController
     @categories = Category.all
   end
 
+  def show
+  # The individual category page
+    @category = Category.find(params[:id])
+  end
+
   def create
     @category = Category.new(form_params)
 

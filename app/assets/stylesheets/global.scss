@@ -6,6 +6,7 @@
 $light-grey: #d7d5d8;
 $middle-grey: #acacac;
 $middle-black: #111;
+$error-red: #d65353;
 
 // Main styling
 :root {
@@ -172,6 +173,12 @@ section.form form {
 			background-color: $middle-black;
 		}
 	}
+
+	.errors {
+		margin-bottom: 1rem;
+		font-weight: 700;
+		color: $error-red;
+	}
 }
 
 // Categories
@@ -190,4 +197,5 @@ section.form form {
 .category h2 {
 	background-color: $middle-black;
 	color: #fff;
+	margin-bottom: 0.5rem;
 }
