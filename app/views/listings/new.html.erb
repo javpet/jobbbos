@@ -1,0 +1,16 @@
+<section class="form">
+  <%= simple_form_for [@category, Listing.new] do |f| %>
+
+    <h2>New <span class="bold"><%= @category.title %></span> job listing</h2>
+    <%= f.label :title %>
+    <%= f.text_field :title, :required => true %>
+
+    <span class="hint">
+      Keep it in max 20 characters
+    </span>
+
+    <%= f.input :body , label: "Description", :required => true %>
+
+    <%= f.button :submit, "Create ☻", class:"btn-primary" %>
+  <% end %>
+</section>

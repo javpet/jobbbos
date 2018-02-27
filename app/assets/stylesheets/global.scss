@@ -47,6 +47,14 @@ h4 {
 	font-style: italic;
 }
 
+.light {
+	color: lighten($middle-black, 50%);
+}
+
+.bold {
+	font-weight: 700;
+}
+
 p {
 	line-height: 1.3;
 }
@@ -132,7 +140,7 @@ footer {
 section.form form {
 	display: flex;
 	flex-direction: column;
-	max-width: 40%;
+	max-width: 50%;
 
 	label {
 		margin-top: 2rem;
@@ -148,6 +156,21 @@ section.form form {
 		&::placeholder {
 			color: $middle-grey;
 			font-weight: 400;
+		}
+	}
+
+	.listing_body {
+		display: flex;
+		flex-direction: column;
+
+		label {
+			margin-bottom: 0.5rem;
+		}
+
+		textarea {
+			background-color: transparent;
+			font-size: 1.5rem;
+			height: 10rem;
 		}
 	}
 
@@ -181,7 +204,7 @@ section.form form {
 	}
 }
 
-// Categories
+// Categories index
 .categories {
 	margin-top: 1rem;
 	display: grid;
@@ -198,4 +221,20 @@ section.form form {
 	background-color: $middle-black;
 	color: #fff;
 	margin-bottom: 0.5rem;
+}
+
+// Category show
+.category-show {
+	h2 {
+		margin-bottom: 0.5rem;
+	}
+}
+
+.listings {
+	margin-top: 2rem;
+
+	li {
+		font-size: 1.25rem;
+		margin-bottom: 0.5rem;
+	}
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Jobbbos</title>
+    <title><%= content_for :page_title %> Jobbbos - the best local jobs around</title>
     <!-- Meta tags -->
     <%= csrf_meta_tags %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,9 +19,8 @@
         <h1><%= link_to "#Jobbbos", root_path, class: "logo" %></h1>
         <h2>The greatest job listings from your area!</h2>
         <div class="links">
-          <% if !current_page?(controller: 'categories', action: 'new') %>
+          <% if !current_page?(action: 'new') %>
             <%= link_to "Create new category", new_category_path, class: "btn-primary" %>
-            <%= link_to "Add new listing", new_category_path, class: "btn-primary" %>
           <% else %>
             <%= link_to "←Back to main Jobbbos", root_path  %>
           <% end %>
