@@ -7,7 +7,7 @@
   <ul class="listings">
     <% @category.listings.order(created_at: :desc).each do |listing| %>
     <li class="listing">
-      *<%= link_to listing.title, category_listing_path(listing) %> <span class="light italic">• Posted <%= time_ago_in_words listing.created_at %> ago</span>
+      *<%= link_to listing.title, category_listing_path(@category, listing) %> <span class="light italic">• Posted <%= time_ago_in_words listing.created_at %> ago</span>
     </li>
     <% end %>
   </ul>
