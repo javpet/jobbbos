@@ -6,7 +6,4 @@ class Listing < ApplicationRecord
   validates :title, presence: true, length: { maximum: 20 }
   validates :body, presence: true, length: { minimum: 10 }
 
-  def to_param
-       title
-  end
 end

@@ -12,6 +12,6 @@ class ListingsController < ApplicationController
   end
 
   def show
-    @listing = Listing.find_by(title: params[:id])
+    @listing = Listing.find(params[:id])
   end
 end
