@@ -7,8 +7,11 @@ class ListingsController < ApplicationController
   def create
     @category = Category.find(params[:category_id])
     @listing = @category.listings.new(params.require(:listing).permit(:title, :body))
-    @listing.save
-    redirect_to category_path(@category)
+    if @listing.save
+      redirect_to category_path(@category)
+    else
+      render "new"
+    end
   end
 
   def show

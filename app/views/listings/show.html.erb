@@ -1,5 +1,8 @@
 <% content_for :page_title, @listing.title %>
 
-
-<%= @listing.title %>
-<%= @listing.body  %>
+<div class="listing-individual">
+  <h2><%= @listing.title %></h2>
+  <p>
+    <%= @listing.body  %>
+  </p>
+</div>
