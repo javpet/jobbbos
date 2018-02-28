@@ -1,9 +1,9 @@
 <section class="form">
-  <%= simple_form_for [@category, Listing.new] do |f| %>
+  <%= simple_form_for [@category, @listing] do |f| %>
 
-    <% if Listing.new.errors.any? %>
+    <% if @listing.errors.any? %>
       <div class="errors">
-        <% Listing.new.errors.full_messages.each do |message| %>
+        <% @listing.errors.full_messages.each do |message| %>
           <li>
             <%= message %>
           </li>

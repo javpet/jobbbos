@@ -2,6 +2,7 @@ class ListingsController < ApplicationController
 
   def new
     @category = Category.find(params[:category_id])
+    @listing = Listing.new
   end
 
   def create
