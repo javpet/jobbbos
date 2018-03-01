@@ -1,7 +1,7 @@
 <% content_for :page_title, @listing.title %>
 
 <div class="listing-individual">
-  <h2><%= @listing.title %></h2>
+  <h2><%= @listing.title %></h2><span class="italic created-at"> • Posted <%= time_ago_in_words @listing.created_at %> ago</span>
   <p>
     <%= @listing.body  %>
   </p>

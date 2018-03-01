@@ -5,7 +5,16 @@
       <%= link_to category_path(category) do %>
         <h2 class="category-label"><%= category.title %></h2>
       <% end %>
-      <span class="italic">- latest 5</span>
+      <span class="italic light">- latest 5</span>
+      <% category.listings.last(5).each do |listing| %>
+        <% if listing.respond_to?(:to_s) %>
+          <ul class="jobbbo-collection">
+            <li class="jobbbo-individual">
+              <%= link_to listing.title, category_listing_path(category, listing) %>
+            </li>
+          </ul>
+        <% end %>
+      <% end %>
     </div>
   <% end %>
 </div>

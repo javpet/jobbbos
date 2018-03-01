@@ -10,6 +10,10 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
   end
 
+  def new
+    @category = Category.new
+  end
+
   def create
     @category = Category.new(form_params)
 
@@ -18,10 +22,6 @@ class CategoriesController < ApplicationController
     else
       render "new"
     end
-  end
-
-  def new
-    @category = Category.new
   end
 
   def form_params
