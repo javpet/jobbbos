@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for :page_title %> Jobbbos - the best local jobs around</title>
+    <title><%= content_for :page_title %> Jobbbos - jobs without complication</title>
+    <meta name="description" content="Find a job yourself, faster than ever before" />
     <!-- Meta tags -->
     <%= csrf_meta_tags %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,6 +11,16 @@
     <%= favicon_link_tag 'jobbbos_icon.png', type: 'image/png' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- Social tags -->
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" value="summary">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Jobbbos - jobs without complication" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://jobbbos.herokuapp.com/" />
+    <meta property="og:image" content="https://preview.ibb.co/ibzKYH/Screen_Shot_2018_03_01_at_21_33_10.png" />
+    <meta property="og:description" content="Find a job faster than ever before" />
   </head>
 
   <body>
