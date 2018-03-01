@@ -260,6 +260,10 @@ section.form form {
 		margin-bottom: 0.5rem;
 	}
 
+	p {
+		max-width: 50%;
+	}
+
 	span.created-at {
 		display: inline-block;
 		margin-bottom: 2rem;
