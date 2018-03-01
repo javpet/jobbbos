@@ -270,3 +270,36 @@ section.form form {
 		margin-bottom: 2rem;
 	}
 }
+
+// MOBILE stylesheets
+@media (max-width: 1000px) {
+	h2 {
+		font-size: 1.75rem;
+	}
+
+	section.main-content {
+		padding-bottom: 10rem;
+	}
+
+	section.form form {
+		max-width: 100%;
+	}
+
+	footer {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+
+		p {
+			text-align: center;
+		}
+
+		a {
+			padding-top: 0.5rem;
+			width: 100%;
+		}
+	}
+}
