@@ -16,6 +16,7 @@ class ListingsController < ApplicationController
   end
 
   def show
+    @category = Category.find(params[:category_id])
     @listing = Listing.find(params[:id])
   end
 end

@@ -1,5 +1,10 @@
 <% content_for :page_title, @listing.title %>
 
+
+<%= link_to category_path(@category) do %>
+    ←Back to <%= @category.title %> category page
+<% end %>
+
 <div class="listing-individual">
   <h2><%= @listing.title %></h2><span class="italic created-at"> • Posted <%= time_ago_in_words @listing.created_at %> ago</span>
   <p>
